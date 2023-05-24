@@ -1,16 +1,14 @@
 import React from 'react'
 import Image from 'next/image'
-import foodOne from "../assets/food 1.png"
-import personOne from "../assets/person 1.png"
 
 export default function Blog({ className, src }) {
     return (
-        <div className={`${className ? className : 'col-span-6'}`}>
+        <article className={`${className ? className : 'col-span-6'}`}>
             <Image className='shadow-lg w-full rounded-3xl' loading="lazy" width={387} height={300} src={src ? src : "https://images.unsplash.com/photo-1414235077428-338989a2e8c0"} alt="" />
             <div className='mt-4'>
                 <p className='mb-3'>#Food  #Travel   #Fashion</p>
-                <h3 className='text-2xl text-[#1F1F1F] font-bold mb-1'>Better With Cookie</h3>
-                <p className='text-lg text-[#1F1F1F] mb-2'>Blogs typically contain written articles on specific topics. These articles may be more informative, educational, entertaining, or a combination of these.</p>
+                <h3 className='text-2xl text-[#1F1F1F] font-bold mb-1 cursor-pointer line-clamp-1'>Better With Cookie</h3>
+                <p className='text-lg text-[#1F1F1F] mb-2 line-clamp-3'>Blogs typically contain written articles on specific topics. These articles may be more informative, educational, entertaining, or a combination of these.</p>
                 <div className='flex justify-between mt-4'>
                     <p className='text-red-600 font-semibold cursor-pointer'>Read More...</p>
                     <div className='flex gap-4'>
@@ -37,13 +35,13 @@ export default function Blog({ className, src }) {
                     </div>
                 </div>
                 <div className='flex gap-3 items-center mt-8'>
-                    <Image width={54} height={54} src={personOne} alt="" />
+                    <Image width={54} height={54} className='w-14 h-14 object-cover rounded-full shadow-md' src="https://images.unsplash.com/photo-1591084728795-1149f32d9866" alt="" />
                     <div>
-                        <h3>Mehedi Hasan</h3>
-                        <p>20 May, 2020</p>
+                        <h3 className='font-semibold text-lg'>Mehedi Hasan</h3>
+                        <p className='text-base'>20 May, 2020</p>
                     </div>
                 </div>
             </div>
-        </div>
+        </article>
     )
 }

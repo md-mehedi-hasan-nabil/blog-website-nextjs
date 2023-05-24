@@ -4,7 +4,7 @@
 
 @layer components {
   .heading-title {
-    @apply text-3xl font-bold text-[#1F1F1F] mt-10
+    @apply text-3xl font-bold text-[#1F1F1F] mt-5
   }
 }
 
