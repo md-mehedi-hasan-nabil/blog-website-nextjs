@@ -3,10 +3,10 @@ import Image from 'next/image'
 import foodOne from "../assets/food 1.png"
 import personOne from "../assets/person 1.png"
 
-export default function Blog({ className }) {
+export default function Blog({ className, src }) {
     return (
         <div className={`${className ? className : 'col-span-6'}`}>
-            <Image className='shadow-lg w-full rounded-3xl' width={387} height={300} src={foodOne} alt="" />
+            <Image className='shadow-lg w-full rounded-3xl' loading="lazy" width={387} height={300} src={src ? src : "https://images.unsplash.com/photo-1414235077428-338989a2e8c0"} alt="" />
             <div className='mt-4'>
                 <p className='mb-3'>#Food  #Travel   #Fashion</p>
                 <h3 className='text-2xl text-[#1F1F1F] font-bold mb-1'>Better With Cookie</h3>

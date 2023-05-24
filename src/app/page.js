@@ -23,8 +23,8 @@ export default function Home() {
           <div>
             <h2 className='heading-title'>All Blog</h2>
             <div className='grid grid-cols-12 gap-4 md:gap-8 py-8'>
-              <Blog className="col-span-12 md:col-span-6" />
-              <Blog className="col-span-12 md:col-span-6" />
+              <Blog src="https://images.unsplash.com/photo-1539635278303-d4002c07eae3" className="col-span-12 md:col-span-6" />
+              <Blog src="https://images.unsplash.com/photo-1530789253388-582c481c54b0" className="col-span-12 md:col-span-6" />
             </div>
           </div>
         </div>
@@ -36,8 +36,8 @@ export default function Home() {
       </div>
       <div className='container'>
         <div className='grid grid-cols-12 gap-4 md:gap-12 py-8'>
-          <Blog className="col-span-12 md:col-span-4" />
-          <Blog className="col-span-12 md:col-span-4" />
+          <Blog src="https://images.unsplash.com/photo-1483985988355-763728e1935b" className="col-span-12 md:col-span-4" />
+          <Blog src="https://images.unsplash.com/photo-1551131618-3f0a5cf594b4" className="col-span-12 md:col-span-4" />
           <Blog className="col-span-12 md:col-span-4" />
         </div>
         <div className='text-center py-8'>
