@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Subscribe() {
     return (
-        <div className='container pb-5 pt-8'>
+        <div className='pb-5 pt-8'>
             <div className='flex flex-col md:flex-row justify-between items-center'>
                 <h2 className='text-4xl font-bold my-5 md:my-0'><span className='text-red-600'>Subscribe</span> to new posts</h2>
                 <form className=''>

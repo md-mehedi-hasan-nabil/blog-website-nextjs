@@ -4,7 +4,7 @@ import React from 'react'
 export default function Feature() {
     return (
         <article className='flex md:flex-row flex-col items-center gap-5'>
-            <Image className='w-full md:w-96 object-cover shadow-lg rounded-2xl' width={387} height={312} src="https://images.unsplash.com/photo-1530789253388-582c481c54b0" alt="" />
+            <Image className='w-full md:w-[25rem] object-cover shadow-lg rounded-2xl' width={400} height={312} src="https://images.unsplash.com/photo-1530789253388-582c481c54b0" alt="" />
             <div>
                 <p className='mb-3'>#Food  #Travel   #Fashion</p>
                 <h3 className='text-2xl text-[#1F1F1F] font-bold mb-1 cursor-pointer'>Better With Cookie</h3>
