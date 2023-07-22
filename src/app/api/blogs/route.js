@@ -1,7 +1,8 @@
 import { NextResponse } from "next/server";
 
 export async function GET(request) {
-    return NextResponse.json([
+    return NextResponse.json(
+        [
         {
             "id": 1,
             "title": "Introduction to Machine Learning",
@@ -27,7 +28,7 @@ export async function GET(request) {
                     "date": "2022-07-17"
                 }
             ],
-            featured: false
+            "featured": false
         },
         {
             "id": 2,
@@ -54,7 +55,7 @@ export async function GET(request) {
                     "date": "2022-09-05"
                 }
             ],
-            featured: false
+            "featured": false
         },
         {
             "id": 3,
@@ -81,7 +82,7 @@ export async function GET(request) {
                     "date": "2022-11-22"
                 }
             ],
-            featured: false
+            "featured": false
         },
         {
             "id": 4,
@@ -108,7 +109,7 @@ export async function GET(request) {
                     "date": "2023-01-12"
                 }
             ],
-            featured: false
+            "featured": false
         }, {
             "id": 5,
             "title": "Building Web Applications with React",
@@ -134,7 +135,7 @@ export async function GET(request) {
                     "date": "2023-03-07"
                 }
             ],
-            featured: false
+            "featured": false
         },
         {
             "id": 6,
@@ -161,7 +162,7 @@ export async function GET(request) {
                     "date": "2023-04-14"
                 }
             ],
-            featured: false
+            "featured": false
         },
         {
             "id": 7,
@@ -188,7 +189,7 @@ export async function GET(request) {
                     "date": "2023-05-03"
                 }
             ],
-            featured: false
+            "featured": false
         },
         {
             "id": 8,
@@ -215,7 +216,8 @@ export async function GET(request) {
                     "date": "2023-06-20"
                 }
             ],
-            featured: false
+            "featured": false
         }
-    ]);
+    ]
+    );
 }
