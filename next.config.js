@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    // basePath: "http://localhost:3000",
+    // basePath: "https://blog-nabil.netlify.app",
     experimental: {
         appDir: true,
     },

@@ -1,28 +1,14 @@
 import React from 'react'
 
-export default function Tags() {
-    const tags = [
-        {
-            id: 1,
-            name: "Food"
-        },
-        {
-            id: 2,
-            name: "Travel"
-        },
-        {
-            id: 3,
-            name: "Fashion"
-        },
-        {
-            id: 4,
-            name: "Photography"
-        },
-        {
-            id: 5,
-            name: "Health"
-        }
-    ]
+async function getTags() {
+    const res = await fetch("http://localhost:3000/api/tags", {
+        cache: 'force-cache'
+    })
+    return res.json()
+}
+
+export default async function Tags() {
+    const tags = await getTags()
     return (
         <div className='py-4'>
             <h3 className='heading-title mb-2'>Tags</h3>
@@ -31,7 +17,7 @@ export default function Tags() {
                     Play
                 </div>
                 {
-                    tags.map(tag => <div className='cursor-pointer hover:bg-red-600 hover:text-white py-1 px-2.5 rounded-full' key={tag.id}>
+                    tags.map(tag => <div key={tag.id} className='cursor-pointer hover:bg-red-600 hover:text-white py-1 px-2.5 rounded-full'>
                         {tag.name}
                     </div>)
                 }
