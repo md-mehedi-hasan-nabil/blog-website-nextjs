@@ -4,7 +4,7 @@ import React from 'react'
 export default function FeaturedBlogCard({ className, src }) {
     return (
         <article className={`${className ? className : 'col-span-9'} my-4`}>
-            <div className='grid grid-cols-3'>
+            <div className='grid grid-cols-3 gap-3'>
                 <div className='col-span-1'>
                     <Image className='shadow-lg w-20 h-20 object-cover rounded-2xl' loading="lazy" width={80} height={80} src={src ? src : "https://images.unsplash.com/photo-1414235077428-338989a2e8c0"} alt="" />
                 </div>

@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
-import logo from "../assets/logo.png"
 import Image from 'next/image'
+import logo from "../../public/logo.png"
 
 export default function Footer() {
   return (
@@ -11,7 +11,7 @@ export default function Footer() {
         <div class="md:flex md:justify-between">
           <div class="mb-6 md:mb-0">
             <Link href="/" class="flex items-center">
-              <Image width={66} height={48} src={logo} className="mr-3" alt="Logo" />
+              <Image width={500} height={280} src={logo} className="w-28" alt="Logo" />
             </Link>
           </div>
           <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">

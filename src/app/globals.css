@@ -8,44 +8,6 @@
   }
 }
 
-.ql-container.ql-snow {
-  border: 1px solid transparent !important;
-}
-.ql-editor {
-  font-size: 1.2rem;
-}
-
-h1 {
-  display: block;
-  font-size: 2rem !important;
-  font-weight: bold;
-}
-h2 {
-  display: block;
-  font-size: 1.5rem !important;
-  font-weight: bold;
-}
-h3 {
-  display: block;
-  font-size: 1.17rem !important;
-  font-weight: bold;
-}
-h4 {
-  display: block;
-  font-size: 1rem !important;
-  font-weight: bold;
-}
-h5 {
-  display: block;
-  font-size: 0.83rem !important;
-  font-weight: bold;
-}
-h6 {
-  display: block;
-  font-size: 0.67rem !important;
-  font-weight: bold;
-}
-
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;

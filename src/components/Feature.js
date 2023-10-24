@@ -7,7 +7,7 @@ export default function Feature() {
             <Image className='w-full md:w-[25rem] object-cover shadow-lg rounded-2xl' width={400} height={312} src="https://images.unsplash.com/photo-1530789253388-582c481c54b0" alt="" />
             <div>
                 <p className='mb-3'>#Food  #Travel   #Fashion</p>
-                <h3 className='text-2xl text-[#1F1F1F] font-bold mb-1 cursor-pointer'>Better With Cookie</h3>
+                <p className='text-2xl text-[#1F1F1F] font-bold mb-1 cursor-pointer'>Better With Cookie</p>
                 <p className='text-lg text-[#1F1F1F] mb-2'>Blogs typically contain written articles on specific topics. These articles may be more informative, educational, entertaining, or a combination of these.</p>
                 <div className='flex justify-between'>
                     <p className='text-red-600 font-semibold cursor-pointer'>Read More...</p>
@@ -38,7 +38,7 @@ export default function Feature() {
                     <Image width={54} height={54} className='w-14 h-14 object-cover rounded-full shadow-md' src="https://images.unsplash.com/photo-1591084728795-1149f32d9866" alt="" />
 
                     <div>
-                        <h3>Mehedi Hasan</h3>
+                        <p>Mehedi Hasan</p>
                         <p>20 May, 2020</p>
                     </div>
                 </div>
