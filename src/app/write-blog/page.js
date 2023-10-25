@@ -12,7 +12,7 @@ export default function EditorPage() {
   const [data, setData] = useState();
 
   return (
-          <Editor data={data} setData={setData} holder="editorjs-container" />
+    <Editor data={data} setData={setData} holder="editorjs-container" />
     // <div className="grid grid-cols-2 gap-2 m-2">
     //   <div className="col-span-1">
     //     <h1>Editor</h1>
