@@ -31,6 +31,7 @@ export const EDITOR_TOOLS = {
   embed: Embed,
   image: {
     class: InlineImage,
+    inlineToolbar: true,
     config: {
       embed: {
         display: true,

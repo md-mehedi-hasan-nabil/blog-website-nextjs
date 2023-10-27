@@ -15,6 +15,7 @@
     "@editorjs/editorjs": "^2.27.2",
     "@editorjs/embed": "^2.6.0",
     "@editorjs/header": "^2.7.0",
+    "@editorjs/image": "^2.8.2",
     "@editorjs/inline-code": "^1.4.0",
     "@editorjs/link": "^2.5.0",
     "@editorjs/list": "^1.8.0",
@@ -23,6 +24,7 @@
     "@editorjs/simple-image": "^1.5.1",
     "@editorjs/table": "^2.2.2",
     "autoprefixer": "10.4.14",
+    "bcryptjs": "^2.4.3",
     "editorjs-html": "^3.4.3",
     "editorjs-inline-image": "^1.2.4",
     "eslint": "8.41.0",
@@ -30,15 +32,14 @@
     "flowbite": "^1.6.5",
     "flowbite-react": "^0.4.4",
     "framer-motion": "^10.13.0",
-    "mongodb": "^5.5.0",
+    "jsonwebtoken": "^9.0.2",
     "mongoose": "^7.6.3",
     "next": "13.4.12",
+    "nodemailer": "^6.9.7",
     "postcss": "8.4.23",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hot-toast": "^2.4.1",
     "tailwindcss": "3.3.2"
-  },
-  "devDependencies": {
-    "@editorjs/image": "^2.8.2"
   }
 }
