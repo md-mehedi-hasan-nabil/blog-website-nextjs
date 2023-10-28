@@ -1,12 +1,44 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
 import loginImage from "../../../public/login.jpg";
 import Link from "next/link";
+import { useForm } from "react-hook-form";
 
 export default function SignUp() {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = async (data) => {
+    try {
+      const { username, email, password } = data;
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_HOST_NAME}/api/auth/user`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ username, email, password }),
+        }
+      );
+      const result = await response.json();
+
+      console.log(result);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <section className="container grid grid-cols-12 gap-4 h-screen items-center">
-      <div className="col-span-12 md:col-span-4 bg-white w-full
+      <div
+        className="col-span-12 md:col-span-4 bg-white w-full
         flex items-center justify-center"
       >
         <div className="w-full h-100">
@@ -14,40 +46,47 @@ export default function SignUp() {
             Create your account
           </h1>
 
-          <form className="mt-6">
+          <form onSubmit={handleSubmit(onSubmit)} className="mt-6">
             <div className="mt-4">
-              <label className="block text-gray-700">Name</label>
+              <label htmlFor="username" className="block text-gray-700">
+                Name
+              </label>
               <input
                 type="text"
-                name="name"
-                id=""
+                name="username"
+                id="username"
+                username
+                {...register("username", { required: true })}
                 placeholder="Enter Full Name"
-                minlength="6"
                 className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
                 focus:bg-white focus:outline-none"
                 required
               />
             </div>
             <div className="mt-4">
-              <label className="block text-gray-700">Email Address</label>
+              <label htmlFor="email" className="block text-gray-700">
+                Email Address
+              </label>
               <input
                 type="email"
                 name="email"
-                id=""
+                id="email"
+                {...register("email", { required: true })}
                 placeholder="Enter Email Address"
                 className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none"
-                autofocus
-                autocomplete
                 required
               />
             </div>
 
             <div className="mt-4">
-              <label className="block text-gray-700">Password</label>
+              <label htmlFor="password" className="block text-gray-700">
+                Password
+              </label>
               <input
                 type="password"
                 name="password"
-                id=""
+                id="password"
+                {...register("password", { required: true })}
                 placeholder="Enter Password"
                 minlength="6"
                 className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
@@ -57,11 +96,13 @@ export default function SignUp() {
             </div>
 
             <div className="mt-4">
-              <label className="block text-gray-700">Retype Password</label>
+              <label htmlFor="retypePassword" className="block text-gray-700">
+                Retype Password
+              </label>
               <input
                 type="password"
-                name="password"
-                id=""
+                name="retypePassword"
+                id="retypePassword"
                 placeholder="Enter Same Password"
                 minlength="6"
                 className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
@@ -96,9 +137,9 @@ export default function SignUp() {
               <span className="ml-4">SignUp with Google</span>
             </div>
           </button>
-           
+
           <p className="mt-8">
-          Don't have an Account?{" "}
+            Don't have an Account?{" "}
             <Link
               href="/login"
               className="text-blue-500 hover:text-blue-700 font-semibold"
